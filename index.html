@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SB Best School system</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <!-- Google API Script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <!-- Login Panel Section -->
+    <section id="login">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required />
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+                <!-- Google Login Button -->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </form>
+        </div>
+    </section>
+    <!-- Dark Mode Toggle Button (Place inside the body tag) -->
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+<!-- Adding Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Example of Adding Icon to Button -->
+<button class="login-btn">
+    <i class="fas fa-sign-in-alt"></i> Login
+</button>
+<script>
+    // Add "visible" class on scroll
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+<label for="show-password">Show Password</label>
+<input type="checkbox" id="show-password">
+
+    <!-- <label for="show-password">Show Password</label>
+<input type="checkbox" id="show-password">
+Main Content (Visible After Login) -->
+    <header>
+        <div class="branding">
+            <h1>SB Best School System</h1>
+            <p>Building a brighter future through education</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#attendance">Attendance</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>SB Best School System</h2>
+            <p>Your gateway to a quality Islamic education.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Annual Day - December 15, 2024</li>
+                <li>Sports Day - January 20, 2025</li>
+                <li>Science Fair - March 5, 2025</li>
+                <li>Inter-School Competition - April 10, 2025</li>
+            </ul>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback">
+            <h2>Feedback Form</h2>
+            <form id="feedback-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Your Feedback</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <!-- Admission Section -->
+        <section id="admissions">
+            <h2>Online Admissions</h2>
+            <form id="admission-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" required>
+                <label for="class">Class</label>
+                <select id="class" name="class">
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                </select>
+                <button type="submit">Submit Admission</button>
+            </form>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <form id="attendance-form">
+                <label for="attendance-name">Student Name</label>
+                <input type="text" id="attendance-name" name="attendanceName" required>
+                <label for="attendance-status">Attendance Status</label>
+                <select id="attendance-status" name="attendanceStatus">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+                <button type="submit">Submit Attendance</button>
+            </form>
+        </section>
+
+        <
+
+        <!-- Grades Section -->
+        <section id="grades">
+            <h2>Student Performance</h2>
+            <form id="grades-form">
+                <label for="student-name">Student Name</label>
+                <input type="text" id="student-name" name="studentName" required>
+        
+                <label for="math-grade">Math Grade</label>
+                <input type="number" id="math-grade" name="mathGrade" required>
+        
+                <label for="science-grade">Science Grade</label>
+                <input type="number" id="science-grade" name="scienceGrade" required>
+        
+                <label for="english-grade">English Grade</label>
+                <input type="number" id="english-grade" name="englishGrade" required>
+        
+                <button type="submit">Submit Grades</button>
+            </form>
+            <div id="performance-result">
+                <!-- Grade results will appear here -->
+            </div>
+        </section>
+
+        <!-- Teacher's Resources Section -->
+        <section id="teacher-resources">
+            <h2>Teacher's Resources</h2>
+            <form id="resource-form">
+                <label for="resource-title">Resource Title</label>
+                <input type="text" id="resource-title" name="resourceTitle" required>
+        
+                <label for="resource-file">Upload Resource</label>
+                <input type="file" id="resource-file" name="resourceFile" required>
+        
+                <button type="submit">Upload Resource</button>
+            </form>
+            <div id="uploaded-resources">
+                <!-- Uploaded resources will appear here -->
+            </div>
+        </section>
+
+        
+       
+
+        <!-- Homework Section -->
+        <section id="homework">
+            <h2>Upload Homework</h2>
+            <form id="homework-form">
+                <label for="homework-title">Homework Title</label>
+                <input type="text" id="homework-title" name="homeworkTitle" required>
+        
+                <label for="homework-file">Upload File</label>
+                <input type="file" id="homework-file" name="homeworkFile" required>
+        
+                <button type="submit">Upload Homework</button>
+            </form>
+            <div id="uploaded-homework">
+                <!-- Uploaded homework details will appear here -->
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        
+
+        <!-- Student Quiz Section -->
+        <section id="quiz">
+            <h2>Take the Quiz</h2>
+            <p>Test your knowledge with our educational quiz!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I apply for admission?</h3>
+                <p>You can fill out the online admission form or visit the school to submit the form.</p>
+            </div>
+            <div class="faq-item">
+                <h3>When does the school year begin?</h3>
+                <p>The school year typically starts in April. Please check our calendar for specific dates.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is there a transportation service?</h3>
+                <p>Yes, we provide transportation services. Please contact the administration for more details.</p>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="shakeelmughal4246@gmail.com">info:Email</a></p>
+            <p>Whatsapp number: <a href="03084246719">Whatsapp number</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SB Best School System. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS File -->
+    <script src="scripts.js"></script>
+
+    <!-- Google Sign-In Callback -->
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log("Logged in as: " + profile.getName());
+            // Redirect to the main page after login
+            window.location.href = "#home";
+        }
+    </script>
+
+</body>
+</html>
